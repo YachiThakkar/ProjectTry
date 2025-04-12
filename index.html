@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RENEE Cosmetics</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>RENEE</h1>
+    <nav>
+      <a href="#products">Home</a>
+      <a href="#">Offers</a>
+      <a href="#contact">Contact</a>
+
+    </nav>
+  </header>
+
+  <main>
+    <h2>Shop by Category</h2>
+
+    <div class="category-buttons">
+      <button onclick="showCategory('lipsticks')">Lipsticks</button>
+      <button onclick="showCategory('eyes')">Eyes</button>
+      <button onclick="showCategory('face')">Face</button>
+      <button onclick="showCategory('skincare')">Skincare</button>
+    </div>
+
+    <!-- LIPSTICKS -->
+    <section id="lipsticks" class="category-section active">
+      <h3>Lipsticks</h3>
+      <div class="product-grid">
+        <div class="product-card">
+          <img src="renee_cosmetics/lipstick1.jpg" alt="Lipstick 1">
+          <h4>FAB 5 in 1 Lipstick</h4>
+          <p>₹750</p>
+        </div>
+        <div class="product-card">
+          <img src="renee_cosmetics/lipstick2.jpg" alt="Lipstick 2">
+          <h4>Mad Matte Lipstick</h4>
+          <p>₹399</p>
+        </div>
+        <div class="product-card">
+          <img src="renee_cosmetics/lipstick3.jpg" alt="Lipstick 3">
+          <h4>Stay With Me Lipstick</h4>
+          <p>₹450</p>
+        </div>
+        <div class="product-card">
+          <img src="renee_cosmetics/lipstick4.jpg" alt="Lipstick 4">
+          <h4>Mini Matte Combo</h4>
+          <p>₹599</p>
+        </div>
+        <div class="product-card">
+          <img src="renee_cosmetics/lipstick5.jpg" alt="Lipstick 5">
+          <h4>Silk Strokes Crayon</h4>
+          <p>₹499</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- EYES -->
+    <section id="eyes" class="category-section">
+      <h3>Eyes</h3>
+      <div class="product-grid">
+        <div class="product-card">
+          <img src="renee_cosmetics/eye1.jpg" alt="Eye 1">
+          <h4>Bold Kohl Kajal</h4>
+          <p>₹199</p>
+        </div>
+        <div class="product-card">
+          <img src="renee_cosmetics/eye2.jpg" alt="Eye 2">
+          <h4>See Me Shine Eyeshadow</h4>
+          <p>₹450</p>
+        </div>
+        <div class="product-card">
+          <img src="renee_cosmetics/eye3.jpg" alt="Eye 3">
+          <h4>Define Eyebrow Pen</h4>
+          <p>₹499</p>
+        </div>
+        <div class="product-card">
+          <img src="renee_cosmetics/eye4.jpg" alt="Eye 4">
+          <h4>Fab 4 in 1 Eye Pen</h4>
+          <p>₹599</p>
+        </div>
+        <div class="product-card">
+          <img src="renee_cosmetics/eye5.jpg" alt="Eye 5">
+          <h4>Volumizing Mascara</h4>
+          <p>₹349</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FACE -->
+    <section id="face" class="category-section">
+      <h3>Face</h3>
+      <div class="product-grid">
+        <div class="product-card">
+          <img src="renee_cosmetics/face1.jpg" alt="Face 1">
+          <h4>Face Base Foundation</h4>
+          <p>₹645</p>
+        </div>
+        <div class="product-card">
+          <img src="renee_cosmetics/face2.jpg" alt="Face 2">
+          <h4> 7-In-1 Face Base BB Cream SPF 30</h4>
+          <p>₹473</p>
+        </div>
+        <div class="product-card">
+          <img src="renee_cosmetics/face3.jpg" alt="Face 3">
+          <h4> Madness pH Blush </h4>
+          <p>₹499</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKINCARE -->
+    <section id="skincare" class="category-section">
+      <h3>Skincare</h3>
+      <div class="product-grid">
+        <div class="product-card">
+          <img src="renee_cosmetics/skincare1.jpg" alt="Skincare 1">
+          <h4>Hydrating Serum</h4>
+          <p>₹382</p>
+        </div>
+        <div class="product-card">
+          <img src="renee_cosmetics/skincare2.jpg" alt="Skincare 2">
+          <h4>Lumi Glow Cream</h4>
+          <p>₹429</p>
+        </div>
+        <div class="product-card">
+          <img src="renee_cosmetics/skincare3.jpg" alt="Skincare 3">
+          <h4>SPF 50 Sunscreen</h4>
+          <p>₹322</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- CONTACT -->
+  <section id="contact" class="category-section">
+    <h3>Contact Us</h3>
+    <p>📞 Phone: <a href="tel:+919876543210">+91 0000000000</a></p>
+    <p>📧 Email: <a href="mailto:support@renee.com">support@renee.com</a></p>
+  </section>
+
+  
+  <footer>
+    <p>&copy; 2025 RENEE Cosmetics. All rights reserved.<br>
+      Follow us on <a href="https://www.instagram.com/itz._yachi._" target="_blank">Instagram</a>
+    </p>
+  </footer>
+
+  <script>
+    function showCategory(category) {
+      const sections = document.querySelectorAll(".category-section:not(#contact)");
+      sections.forEach(section => section.classList.remove("active"));
+      document.getElementById(category).classList.add("active");
+    }
+  
+    // Show Contact section when clicked
+    document.querySelector('a[href="#contact"]').addEventListener("click", function (e) {
+      e.preventDefault();
+      const sections = document.querySelectorAll(".category-section");
+      sections.forEach(section => section.classList.remove("active"));
+      document.getElementById("contact").classList.add("active");
+    });
+
+
+  </script>
+  
+
+
+
+</body>
+</html>
